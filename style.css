@@ -1,0 +1,205 @@
+/*
+ * Author: Eric R - NumEricR
+ * Creation: 25-08-2011
+ */
+
+@font-face {
+	font-family: 'Fontin'; /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
+	src: url('Fontin-Regular.ttf') format('truetype');
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+body {
+	font-family: Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 62.5%;
+	color: #333;
+	background-color: #ccc;
+}
+a {
+	text-decoration: none;
+	color: #666;
+}
+
+#menu,
+#virtualcard {
+	width: 40em;
+	position: absolute;
+	top: -12em;
+	left: -20em;
+}
+
+#menu,
+#web-activity ul {
+	text-align: center;
+}
+
+#menu ul,
+#virtualcard ul {
+	list-style-type: none;
+}
+#menu li,
+#virtualcard li {
+	display: inline;
+}
+
+#virtualcard,
+#web-activity,
+#github {
+	height: 22em;
+}
+
+#web-activity a img,
+#about .dl a img {
+	border: none;
+}
+#about .dl a:hover img,
+#about .dl a:focus img,
+#web-activity a:hover img,
+#web-activity a:focus img {
+	opacity: 1;
+}
+
+#content {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+
+/* --- =! Menu --- */
+#menu {
+  display: none;                    /* TODO: remove when ready */
+  
+	font-size: 1.3em;
+}
+#menu ul {
+	padding-bottom: 2em;
+	margin: 0;
+}
+#menu li {
+	margin: 0 1em;
+}
+
+#menu a {
+	color: #999;
+	text-shadow: 1px 1px 2px #fff;
+}
+#menu a:hover,
+#menu a:focus {
+	color: #666;
+	text-shadow: none;
+}
+/* --- / Menu --- */
+
+
+/* --- =! Content --- */
+#virtualcard {
+	border: 1.5px solid #666;
+	background-color: white;
+	font-family: 'Fontin', Helvetica, Tahoma, Arial, sans-serif;
+	overflow-y: hidden;
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	border-radius: 8px;
+	-moz-box-shadow: 1px 1px 25px #666;
+	-webkit-box-shadow: 1px 1px 25px #666;
+	box-shadow: 1px 1px 25px #666;
+}
+
+#about {
+	padding: 4.5em 0 0 4.5em;
+	height: 17.5em;
+	position: relative;
+}
+#about h1 {
+	font-size: 3.5em;
+	color: #333;
+}
+#virtualcard h1 .nickname {
+    font-size: 0.8em;
+    font-style: italic;
+}
+#about h1 .family-name {
+	text-transform: uppercase;
+}
+#about h2,
+#about .moreAbout,
+#about p {
+	font-size: 1.4em;
+	line-height: 1.4em;
+}
+#about h2,
+#about p {
+	padding-left: 0.2em;
+}
+#about h2 {
+  font-size: 1.8em;
+	font-weight: normal;
+	margin-top: 3.3em;
+}
+#about p span,
+#about .moreAbout,
+#about .dl a span {
+	display: none;
+}
+#virtualcard .adr {
+    display: none;
+}
+#virtualcard .skills {
+    margin-top: 0.4em;
+    padding-left: 0.4em;
+    font-size: 1.4em;
+}
+/*#about .email {			/* Email on "About" pane * /
+	margin-top: 1em;
+	display: inline-block;
+}
+#about a.email:hover,
+#about a.email:focus {
+	text-decoration: underline;
+}*/
+
+#about .dl {
+  display: none;                    /* TODO: remove when ready */
+  
+	position: absolute;
+	bottom: 0.4em;
+	right: 0.6em;
+	font-style: normal;
+}
+#about .dl a:hover span,
+#about .dl a:focus span {
+	display: inline;
+}
+#about .dl a span {
+	font-family: Helvetica, Tahoma, Arial, sans-serif;
+	font-size: 0.9em;
+	color: #693;
+	margin-right: 0.5em;
+}
+#about .dl a img {
+	opacity: 0.4;
+	vertical-align: text-bottom;
+}
+
+
+#credits {
+	position: absolute;
+	bottom: 0.5em;
+	right: 0.5em;
+	font-style: italic;
+}
+#credits,
+#credits a {
+	color: #666;
+}
+#credits a:hover,
+#credits a:focus {
+	text-decoration: underline;
+}
+/* --- / Content --- */
