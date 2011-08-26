@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+SOURCE:file:http://numericr.github.com/Eric_R.vcf
+N:R;Eric
+FN:Eric R
+NICKNAME:NumEricR
+TITLE:Web developer
+ADR:;;;Nantes;;;France
+END:VCARD

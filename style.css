@@ -165,8 +165,6 @@ a {
 }*/
 
 #about .dl {
-  display: none;                    /* TODO: remove when ready */
-  
 	position: absolute;
 	bottom: 0.4em;
 	right: 0.6em;
@@ -193,6 +191,9 @@ a {
 	bottom: 0.5em;
 	right: 0.5em;
 	font-style: italic;
+}
+#credits span {
+  font-weight: bold;
 }
 #credits,
 #credits a {
