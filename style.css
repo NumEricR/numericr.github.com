@@ -74,19 +74,12 @@ a {
 	text-transform: uppercase;
 }
 
-#virtualcard h2,
-#virtualcard p {
-	font-size: 1.4em;
-	line-height: 1.4em;
-}
-
 #virtualcard h2 {
   font-size: 1.8em;
 	font-weight: normal;
 }
 
-#virtualcard p span,
-#virtualcard .dl a span,
+#virtualcard .dl span,
 #virtualcard .adr {
   position: absolute;
   left: -999em;
@@ -102,17 +95,19 @@ a {
 	bottom: 0.4em;
 	right: 0.6em;
 	font-style: normal;
-}
-#virtualcard .dl a:hover span,
-#virtualcard .dl a:focus span {
-	position: relative;
-	left: 0;
+	font-size: 1.4em;
+	line-height: 1.4em;
 }
 #virtualcard .dl a span {
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	font-size: 0.9em;
 	color: #693;
 	margin-right: 0.5em;
+}
+#virtualcard .dl a:hover span,
+#virtualcard .dl a:focus span {
+	position: relative;
+	left: 0;
 }
 #virtualcard .dl a img {
   border: none;
