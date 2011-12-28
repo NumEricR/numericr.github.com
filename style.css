@@ -3,18 +3,32 @@
  * Creation: 25-08-2011
  */
 
+
 @font-face {
 	font-family: 'Fontin'; /* A font by Jos Buivenga (exljbris) -> www.exljbris.com */
 	src: url('Fontin-Regular.ttf') format('truetype');
 }
 
 
+/*
+ * =! Global styles
+ */
 * {
 	margin: 0;
 	padding: 0;
 	line-height: 1;
 }
+html,
 body {
+	width: 100%;
+	height: 100%;
+}
+html {
+  display: table;
+}
+body {
+  display: table-cell;
+  vertical-align: middle;
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	font-size: 62.5%;
 	color: #333;
@@ -25,84 +39,20 @@ a {
 	color: #666;
 }
 
-#menu,
+
+/*
+ * =! vCard
+ */
 #virtualcard {
-	width: 40em;
-	position: absolute;
-	top: -12em;
-	left: -20em;
-}
-
-#menu,
-#web-activity ul {
-	text-align: center;
-}
-
-#menu ul,
-#virtualcard ul {
-	list-style-type: none;
-}
-#menu li,
-#virtualcard li {
-	display: inline;
-}
-
-#virtualcard,
-#web-activity,
-#github {
-	height: 22em;
-}
-
-#web-activity a img,
-#about .dl a img {
-	border: none;
-}
-#about .dl a:hover img,
-#about .dl a:focus img,
-#web-activity a:hover img,
-#web-activity a:focus img {
-	opacity: 1;
-}
-
-#content {
-	position: absolute;
-	left: 50%;
-	top: 50%;
-}
-
-
-/* --- =! Menu --- */
-#menu {
-  display: none;                    /* TODO: remove when ready */
-  
-	font-size: 1.3em;
-}
-#menu ul {
-	padding-bottom: 2em;
-	margin: 0;
-}
-#menu li {
-	margin: 0 1em;
-}
-
-#menu a {
-	color: #999;
-	text-shadow: 1px 1px 2px #fff;
-}
-#menu a:hover,
-#menu a:focus {
-	color: #666;
-	text-shadow: none;
-}
-/* --- / Menu --- */
-
-
-/* --- =! Content --- */
-#virtualcard {
+	position: relative;
+	max-width: 36em;
+  width: 36em;
+	height: 17em;
+	margin: 0 auto;
+	padding: 5em 0 0 4em;
 	border: 1.5px solid #666;
 	background-color: white;
 	font-family: 'Fontin', Helvetica, Tahoma, Arial, sans-serif;
-	overflow-y: hidden;
 	-moz-border-radius: 8px;
 	-webkit-border-radius: 8px;
 	border-radius: 8px;
@@ -111,96 +61,86 @@ a {
 	box-shadow: 1px 1px 25px #666;
 }
 
-#about {
-	padding: 4.5em 0 0 4.5em;
-	height: 17.5em;
-	position: relative;
-}
-#about h1 {
+#virtualcard h1 {
 	font-size: 3.5em;
+	margin-bottom: 1.5em;
 	color: #333;
 }
 #virtualcard h1 .nickname {
-    font-size: 0.8em;
-    font-style: italic;
+  font-size: 0.8em;
+  font-style: italic;
 }
-#about h1 .family-name {
+#virtualcard h1 .family-name {
 	text-transform: uppercase;
 }
-#about h2,
-#about .moreAbout,
-#about p {
+
+#virtualcard h2,
+#virtualcard p {
 	font-size: 1.4em;
 	line-height: 1.4em;
 }
-#about h2,
-#about p {
-	padding-left: 0.2em;
-}
-#about h2 {
+
+#virtualcard h2 {
   font-size: 1.8em;
 	font-weight: normal;
-	margin-top: 3.3em;
 }
-#about p span,
-#about .moreAbout,
-#about .dl a span {
-	display: none;
-}
-#virtualcard .adr {
-    display: none;
-}
-#virtualcard .skills {
-    margin-top: 0.4em;
-    padding-left: 0.4em;
-    font-size: 1.4em;
-}
-/*#about .email {			/* Email on "About" pane * /
-	margin-top: 1em;
-	display: inline-block;
-}
-#about a.email:hover,
-#about a.email:focus {
-	text-decoration: underline;
-}*/
 
-#about .dl {
+#virtualcard p span,
+#virtualcard .dl a span,
+#virtualcard .adr {
+  position: absolute;
+  left: -999em;
+}
+
+#virtualcard .skills {
+  margin-top: 0.5em;
+  font-size: 1.4em;
+}
+
+#virtualcard .dl {
 	position: absolute;
 	bottom: 0.4em;
 	right: 0.6em;
 	font-style: normal;
 }
-#about .dl a:hover span,
-#about .dl a:focus span {
-	display: inline;
+#virtualcard .dl a:hover span,
+#virtualcard .dl a:focus span {
+	position: relative;
+	left: 0;
 }
-#about .dl a span {
+#virtualcard .dl a span {
 	font-family: Helvetica, Tahoma, Arial, sans-serif;
 	font-size: 0.9em;
 	color: #693;
 	margin-right: 0.5em;
 }
-#about .dl a img {
+#virtualcard .dl a img {
+  border: none;
+  vertical-align: text-bottom;
 	opacity: 0.4;
-	vertical-align: text-bottom;
+}
+#virtualcard .dl a:hover img,
+#virtualcard .dl a:focus img {
+	opacity: 1;
 }
 
 
+/*
+ * =! Credits
+ */
 #credits {
 	position: absolute;
-	bottom: 0.5em;
-	right: 0.5em;
+	bottom: 1em;
+	right: 1em;
 	font-style: italic;
 }
 #credits span {
   font-weight: bold;
 }
-#credits,
-#credits a {
+#credits {
 	color: #666;
 }
 #credits a:hover,
 #credits a:focus {
 	text-decoration: underline;
 }
-/* --- / Content --- */
